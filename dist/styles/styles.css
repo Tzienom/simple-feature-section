@@ -1,0 +1,28 @@
+body {
+  background: var(--darker-grey) url("../resources/Background_image.svg")
+    no-repeat;
+}
+
+.card {
+  background-color: var(--dark-grey);
+}
+
+.product-icon-1 {
+  background-color: var(--mistyrose);
+}
+
+.product-icon-2 {
+  background-color: var(--bluish-grey);
+}
+
+.product-icon-3 {
+  background-color: var(--light-pink);
+}
+
+.off-white-text {
+  color: var(--bluish-grey);
+}
+
+.blue-grey-text {
+  color: var(--light-grey);
+}

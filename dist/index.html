@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Simple Feature Section - Quality feedbacks for your Sass Products"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="resources/favicon.ico"
+      type="image/x-icon"
+      sizes="96x96"
+    />
+
+    <!-- Preload images -->
+    <link
+      rel="preload"
+      as="image"
+      href="./resources/photo_2.webp"
+      type="image/webp"
+    />
+
+    <!-- CRITICAL STYLES -->
+    <style>
+      :root {
+        --darker-grey: #121826;
+        --dark-grey: #212936;
+        --off-white: #e5e7eb;
+        --grey: #9da3ae;
+        --bluish-grey: #dee9fc;
+        --light-pink: #fbe5e6;
+        --mistyrose: #fceed8;
+        --light-grey: #d2d5da;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Regular */
+      @font-face {
+        font-family: "Outfit";
+        src: local("Outfit"),
+          url("./fonts/Outfit-Regular.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+      }
+
+      /* Medium */
+      @font-face {
+        font-family: "Outfit";
+        src: local("Outfit"), url("./fonts/Outfit-Medium.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+      }
+
+      /* SemiBold */
+      @font-face {
+        font-family: "Outfit";
+        src: local("Outfit"),
+          url("./fonts/Outfit-SemiBold.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+      }
+
+      body {
+        font-family: "Outfit", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+          "Helvetica Neue", sans-serif;
+        min-height: 100vh;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2.5em;
+      }
+
+      #main-container .product-features {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .header {
+        text-align: center;
+        margin-top: 3rem;
+      }
+
+      .title {
+        font-size: 2.5rem;
+        font-weight: 600;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .subtitle {
+        margin: 1rem 0 3rem;
+      }
+
+      .card {
+        border-radius: 15px;
+        padding: 1.2em;
+        max-width: 350px;
+      }
+
+      .product-icon {
+        display: inline-block;
+        padding: 1em;
+        border-radius: 50px;
+      }
+
+      .product-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 1rem 0;
+      }
+
+      .product-details {
+        max-width: 250px;
+      }
+
+      .product-image {
+        display: block;
+        border-radius: 12px;
+        margin-top: 1rem;
+      }
+
+      .author-info {
+        font-size: 0.625rem;
+        text-align: center;
+        margin-top: 16px;
+        color: var(--bluish-grey);
+      }
+
+      .author-info a {
+        text-decoration: none;
+        color: var(--mistyrose);
+        font-weight: 500;
+      }
+
+      /* Tablet */
+      @media (min-width: 768px) {
+        #main-container .product-features {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: flex-start;
+        }
+
+        .card {
+          flex: 1 1 calc(50% - 2rem);
+        }
+      }
+
+      @media (min-width: 1024px) {
+        body {
+          display: grid;
+          grid-template-rows: 1fr auto;
+          place-items: center;
+        }
+
+        #main-container .product-features {
+          gap: 3rem;
+          flex-wrap: nowrap;
+        }
+      }
+    </style>
+
+    <!-- Preload critical stylesheet -->
+    <link
+      rel="stylesheet"
+      href="./styles/styles.css"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <title>Simple Feature Section | devChallenges.io</title>
+  </head>
+  <body>
+    <main id="main-container">
+      <div class="container">
+        <div class="header">
+          <h1 class="title off-white-text">
+            Quality feedbacks for your SaaS products
+          </h1>
+          <p class="subtitle blue-grey-text">
+            The blocks & components you need
+          </p>
+        </div>
+
+        <div class="product-features">
+          <article class="card">
+            <span class="product-icon product-icon-1">✋</span>
+            <h2 class="product-title off-white-text">
+              Collect Feedback at Multiple Touchpoints
+            </h2>
+            <p class="product-details blue-grey-text">
+              Provide a comprehensive understanding of the customer experience.
+            </p>
+
+            <img
+              src="./resources/photo_2.webp"
+              srcset="
+                ./resources/photo_2.webp    267w,
+                ./resources/photo_2@2x.webp 534w
+              "
+              sizes="(max-width: 534px) 100vw, 534px"
+              alt="Answering questions"
+              class="product-image"
+              width="534"
+              height="386"
+              fetchpriority="high"
+            />
+          </article>
+
+          <article class="card">
+            <span class="product-icon product-icon-2">🥅</span>
+            <h2 class="product-title off-white-text">
+              Ask Targeted and Specific Questions
+            </h2>
+            <p class="product-details blue-grey-text">
+              Avoid vague or open-ended questions that may not yield actionable
+              insights.
+            </p>
+
+            <img
+              src="./resources/photo_1.webp"
+              srcset="
+                ./resources/photo_1.webp    267w,
+                ./resources/photo_1@2x.webp 534w
+              "
+              sizes="(max-width: 534px) 100vw, 534px"
+              alt="Customer experience lecture"
+              class="product-image"
+              width="534"
+              height="386"
+            />
+          </article>
+
+          <article class="card">
+            <span class="product-icon product-icon-3">💬</span>
+            <h2 class="product-title off-white-text">
+              Prioritize and Respond to Feedback
+            </h2>
+            <p class="product-details blue-grey-text">
+              Communicate the changes or improvements you've made in response to
+              their feedback.
+            </p>
+
+            <img
+              src="./resources/photo_3.webp"
+              srcset="
+                ./resources/photo_3.webp    267w,
+                ./resources/photo_3@2x.webp 534w
+              "
+              sizes="(max-width: 534px) 100vw, 534px"
+              alt="Giving feedback"
+              class="product-image"
+              width="534"
+              height="386"
+            />
+          </article>
+        </div>
+        <!-- product-features -->
+      </div>
+      <!-- container -->
+    </main>
+
+    <footer class="author-info">
+      <div class="container">
+        Coded by <a href="https://x.com/_tzienom">Tzienom</a> | Challenge by
+        <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
+          >devChallenges.io</a
+        >.
+      </div>
+    </footer>
+  </body>
+</html>
